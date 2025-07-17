@@ -1,0 +1,14 @@
+{
+    "task_info":{
+        "task":"website_injection",
+        "type":"text_generation",
+        "target_instruction":"website_injection",
+        "injected_instruction":"website_injection"
+    },
+    "dataset_info":{
+        "dataset": "website",
+        "split":"",
+        "icl_split":"",
+        "class_num":-1
+    }
+}

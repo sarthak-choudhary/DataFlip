@@ -1,0 +1,26 @@
+{
+    "model_info": {
+        "provider": "huggingface",
+        "name": "/path/to/Llama-4-Scout-17B-16E-Instruct"
+    },
+    "api_key_info": {
+        "api_keys": [
+            ""
+        ],
+        "api_key_use": 0
+    },
+    "params": {
+        "temperature": 0.1,
+        "seed": 100,
+        "gpus": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "device": "cuda",
+        "max_output_tokens": 128,
+        "ft_path": "",
+        "decoding_method": "greedy"
+    }
+}

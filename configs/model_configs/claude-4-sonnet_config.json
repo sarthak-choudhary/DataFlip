@@ -1,0 +1,21 @@
+{
+    "model_info": {
+        "provider": "vertex-anthropic",
+        "name": "claude-sonnet-4@20250514"
+    },
+    "api_key_info": {
+        "api_keys": [],
+        "api_key_use": 0,
+        "deployment_name": "gpt-4.1",
+        "api_version": "",
+        "endpoint": "",
+        "project": "",
+        "location": ""
+    },
+    "params": {
+        "temperature": 0.1,
+        "seed": 100,
+        "gpus": [],
+        "max_output_tokens": 1024
+    }
+}
