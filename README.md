@@ -4,9 +4,9 @@ Recent defenses based on known-answer detection (KAD) have achieved near-perfect
 ![Overview of KAD. Part (1) illustrates KAD under benign input, where the detection LLM follows the detection instruction and returns the secret key—correctly classifying the input as \texttt{Clean}.
 Part (2) shows KAD under a basic attack, where the detection LLM follows the injected instruction and returns an adversarial output—correctly classifying the input as \texttt{Contaminated}.
 Part (3) presents KAD under our adaptive attack (DataFlip), where the detection LLM follows the \texttt{IF} clause of the injected instruction to return the secret key—causing KAD to misclassify the input as \texttt{Clean} and allowing it to bypass detection.](data/dataflip_workflow.png)
-___
+
 ## Updates
-* (07/23/25): We include a preprocessing step to make all inputs to the detection LLM lower case and restrict the detection LLM's output to 10 tokens. We also provide a new prompt template for DataFlip that further achieves perfect evasion rates on several tasks while also significantly improving ASVs.
+* (07/23/25): We include a preprocessing step to make all inputs to the detection LLM lower case and restrict the detection LLM's output to 10 tokens. We also provide a new prompt template for DataFlip that achieves perfect evasion rates on several tasks while significantly improving ASVs.
 
 ## Setup
 ### Packages and Environment
