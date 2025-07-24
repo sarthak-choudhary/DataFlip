@@ -29,7 +29,7 @@ def create_attacker(attack_strategy, task):
         return DataFlipAttacker_DataSentinel(attack_strategy, task)
     
     elif attack_strategy == 'dataflip_datasentinel_dev':
-        return DataFlipAttacker_DataSentinel(attack_strategy, task)
+        return DataFlipAttacker_DataSentinel_dev(attack_strategy, task)
     
     err_msg = f"{attack_strategy} is not a valid attack strategy."
     err_msg = f"{err_msg}\nValid attack strategy is one of ['naive', 'escape', 'ignore', 'fake_comp', 'combine']"
