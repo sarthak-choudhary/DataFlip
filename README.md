@@ -6,7 +6,7 @@ Part (2) shows KAD under a basic attack, where the detection LLM follows the inj
 Part (3) presents KAD under our adaptive attack (DataFlip), where the detection LLM follows the \texttt{IF} clause of the injected instruction to return the secret key—causing KAD to misclassify the input as \texttt{Clean} and allowing it to bypass detection.](data/dataflip_workflow.png)
 
 ## Updates
-* (07/23/25): We include a preprocessing step to make all inputs to the detection LLM be in lowercase and restrict the detection LLM's output to 10 tokens. We also provide a new prompt template for DataFlip that achieves perfect evasion rates on several tasks while significantly improving ASVs.
+* (07/23/25): We include a preprocessing step to convert all contaminated inputs to the detection LLM to lowercase and restrict the detection LLM's output to 10 tokens. We also provide a new prompt template for DataFlip that achieves perfect evasion rates on several tasks while significantly improving ASVs.
 
 ## Setup
 ### Packages and Environment
