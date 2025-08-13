@@ -1,5 +1,5 @@
 # DataFlip
-Recent defenses based on known-answer detection (KAD) have achieved near-perfect performance by using an LLM to classify inputs as clean or contaminated. We present [DataFlip](https://arxiv.org/abs/2507.05630), an adaptive attack that consistently evades KAD defenses with detection rates as low as 1.5% while reliably inducing malicious behavior with success rates of up to 88%, without needing white-box access to the LLM or any optimization procedures. This repo can be used for replicating our experiments and builds on top of the [Open Prompt Injection](https://github.com/liu00222/Open-Prompt-Injection).
+Recent defenses based on known-answer detection (KAD) have achieved near-perfect performance by using an LLM to classify inputs as clean or contaminated. We present [DataFlip](https://arxiv.org/abs/2507.05630), an adaptive attack that consistently evades KAD defenses with detection rates as low as 0.5% while reliably inducing malicious behavior with success rates of up to 93%, without needing white-box access to the LLM or any optimization procedures. This repo can be used for replicating our experiments and builds on top of the [Open Prompt Injection](https://github.com/liu00222/Open-Prompt-Injection).
 
 ![Overview of KAD. Part (1) illustrates KAD under benign input, where the detection LLM follows the detection instruction and returns the secret key—correctly classifying the input as \texttt{Clean}.
 Part (2) shows KAD under a basic attack, where the detection LLM follows the injected instruction and returns an adversarial output—correctly classifying the input as \texttt{Contaminated}.
@@ -25,8 +25,8 @@ Finetuned DataSentinel models can be downloaded from the [Open Prompt Injection 
 
 ### Experiments
 1. **RQ1: Secret Key Extraction.** We show in `RQ1.ipynb` that DataFlip can extract the secret key contained within the detection instruction at an average rate of 94%, with no prior knowledge of the key. 
-2. **RQ2: Attacking Strong KAD.** We demonstrate the effectiveness of DataFlip in `RQ2.ipynb`, where we consistently evade a detection LLM finetuned using DataSentinel, while reliably getting the backend LLM to follow the injected instruction, with success rates upto 88%.
-3. **RQ3: Fine-tuned vs Base FNR.** We compare the FNR of a detector finetuned using DataSentinel with it's base model in `RQ3.ipynb`. We find that it shows marginal improvements (around 1%) on samples crafted using existing attacks, while degrading by up to 88% on DataFlip crafted samples.
+2. **RQ2: Attacking Strong KAD.** We demonstrate the effectiveness of DataFlip in `RQ2.ipynb`, where we consistently evade a detection LLM finetuned using DataSentinel, while reliably getting the backend LLM to follow the injected instruction, with success rates upto 93%.
+3. **RQ3: Fine-tuned vs Base FNR.** We compare the FNR of a detector fine-tuned using DataSentinel with an instruction fine-tuned Mistral 7B model in `RQ3.ipynb`. We find that it shows essentially no improvement on samples crafted using existing attacks, while underperforming by up to 83% on DataFlip crafted samples.
 
 ### Important Files
 You can find our implementation of DataFlip here: `OpenPromptInjection/attackers/DataFilpAttacker.py`
