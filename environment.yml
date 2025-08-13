@@ -21,6 +21,7 @@ dependencies:
   - wheel=0.43.0=py39h06a4308_0
   - xz=5.4.6=h5eee18b_1
   - zlib=1.2.13=h5eee18b_1
+  - ipykernel=6.29.5=py39h06a4308_1
   - pip:
       - absl-py==2.3.1
       - accelerate==1.8.1
@@ -36,6 +37,7 @@ dependencies:
       - attrs==25.3.0
       - azure-ai-inference==1.0.0b9
       - azure-core==1.35.0
+      - backcall==0.2.0
       - bitsandbytes==0.46.1
       - cachetools==5.5.2
       - certifi==2025.7.14
@@ -65,10 +67,10 @@ dependencies:
       - fsspec==2024.3.1
       - google-ai-generativelanguage==0.6.15
       - google-api-core==2.25.1
-      - google-api-python-client==2.176.0
+      - google-api-python-client==2.177.0
       - google-auth==2.40.3
       - google-auth-httplib2==0.2.0
-      - google-cloud-aiplatform==1.103.0
+      - google-cloud-aiplatform==1.105.0
       - google-cloud-bigquery==3.35.0
       - google-cloud-core==2.4.3
       - google-cloud-resource-manager==1.14.2
@@ -130,7 +132,7 @@ dependencies:
       - nvidia-nccl-cu12==2.26.2
       - nvidia-nvjitlink-cu12==12.6.85
       - nvidia-nvtx-cu12==12.6.77
-      - openai==1.33.0
+      - openai==1.97.1
       - orjson==3.11.0
       - packaging==25.0
       - pandas==2.3.1
